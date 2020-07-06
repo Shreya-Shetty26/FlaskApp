@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  First page
+{% endblock %}
+
+{% block body  %}
+  <p style="text-align:justify;"> Hello .. this is more.html page . To view Second page  click on see more ...</p>
+  <a href="{{ url_for('second') }}"> See more...</a >
+{% endblock %}

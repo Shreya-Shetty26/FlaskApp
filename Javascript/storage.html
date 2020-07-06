@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+
+        //set starting value of counter to 0
+        if(!localStorage.getItem('counter'))
+            localStorage.setItem('counter',0);
+
+        document.addEventListener('DOMContentLoaded',() => {
+           document.querySelector('#counter').innerHTML = localStorage.getItem('counter');
+
+           //Count every time button is clicked
+           document.querySelector('button').onclick =() => {
+
+              // Increment current counter
+              let counter=localStorage.getItem('counter');
+              counter++;
+
+              // Update counter
+              document.querySelector('#counter').innerHTML = counter;
+              localStorage.setItem('counter',counter);
+
+            }
+
+        });
+
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+  <h1 id="counter">0</h1>
+  <button>Click here !</button>
+</body>
+</html>
